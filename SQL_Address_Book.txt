@@ -190,3 +190,14 @@ mysql> SELECT * FROM addressbook;
 |  2 | Ronaldo    | CR        | Libson  | Porto  | Gao       | 500111 |    123456789 | cris@gmail.com | AddressBook2    | Friend          |
 +----+------------+-----------+---------+--------+-----------+--------+--------------+----------------+-----------------+-----------------+
 2 rows in set (0.00 sec)
+
+---UC10---
+
+mysql> SELECT AddressBookType, count(*) FROM addressbook GROUP BY AddressBookType;
++-----------------+----------+
+| AddressBookType | count(*) |
++-----------------+----------+
+| Family          |        1 |
+| Friend          |        1 |
++-----------------+----------+
+2 rows in set (0.06 sec)
