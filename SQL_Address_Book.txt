@@ -85,3 +85,19 @@ mysql> SELECT * FROM addressbook;
 |  3 | Lionel     | Messi     | barca   | Rico   | Chennai   | 522111 |    689456789 | lmessi@gmail.com |
 +----+------------+-----------+---------+--------+-----------+--------+--------------+------------------+
 3 rows in set (0.06 sec)
+
+---UC4---
+
+mysql> UPDATE addressbook SET email ='cris@gmail.com' WHERE last_name='CR';
+Query OK, 1 row affected (0.18 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM addressbook;
++----+------------+-----------+---------+--------+-----------+--------+--------------+------------------+
+| id | first_name | last_name | address | city   | state     | zip    | phone_number | email            |
++----+------------+-----------+---------+--------+-----------+--------+--------------+------------------+
+|  1 | Veeresh    | SB        | Haveri  | Haveri | Karnataka | 588111 |    123456123 | veer@gmail.com   |
+|  2 | Ronaldo    | CR        | Libson  | Porto  | Gao       | 500111 |    123456789 | cris@gmail.com   |
+|  3 | Lionel     | Messi     | barca   | Rico   | Chennai   | 522111 |    689456789 | lmessi@gmail.com |
++----+------------+-----------+---------+--------+-----------+--------+--------------+------------------+
+3 rows in set (0.04 sec)
