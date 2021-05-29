@@ -66,3 +66,22 @@ mysql> DESCRIBE addressbook;
 | email        | varchar(150) | NO   |     | NULL    |                |
 +--------------+--------------+------+-----+---------+----------------+
 9 rows in set (0.26 sec)
+
+---UC3---
+
+mysql> INSERT INTO addressbook (first_name, last_name, address, city, state, zip, phone_number, email) VALUES
+    -> ('Veeresh', 'SB', 'Haveri', 'Haveri', 'Karnataka', '588111', '123456123', 'veer@gmail.com'),
+    -> ('Ronaldo', 'CR', 'Libson', 'Porto', 'Gao', '500111', '123456789', 'Cr@gmail.com'),
+    -> ('Lionel', 'Messi', 'barca', 'Rico', 'Chennai', '522111', '689456789', 'lmessi@gmail.com');
+Query OK, 3 rows affected (0.44 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM addressbook;
++----+------------+-----------+---------+--------+-----------+--------+--------------+------------------+
+| id | first_name | last_name | address | city   | state     | zip    | phone_number | email            |
++----+------------+-----------+---------+--------+-----------+--------+--------------+------------------+
+|  1 | Veeresh    | SB        | Haveri  | Haveri | Karnataka | 588111 |    123456123 | veer@gmail.com   |
+|  2 | Ronaldo    | CR        | Libson  | Porto  | Gao       | 500111 |    123456789 | Cr@gmail.com     |
+|  3 | Lionel     | Messi     | barca   | Rico   | Chennai   | 522111 |    689456789 | lmessi@gmail.com |
++----+------------+-----------+---------+--------+-----------+--------+--------------+------------------+
+3 rows in set (0.06 sec)
