@@ -143,3 +143,23 @@ mysql> SELECT COUNT(city), COUNT(state) FROM addressbook;
 |           2 |            2 |
 +-------------+--------------+
 1 row in set (0.07 sec)
+
+---UC8---
+
+mysql> SELECT * FROM addressbook;
++----+------------+-----------+---------+--------+-----------+--------+--------------+----------------+
+| id | first_name | last_name | address | city   | state     | zip    | phone_number | email          |
++----+------------+-----------+---------+--------+-----------+--------+--------------+----------------+
+|  1 | Veeresh    | SB        | Haveri  | Haveri | Karnataka | 588111 |    123456123 | veer@gmail.com |
+|  2 | Ronaldo    | CR        | Libson  | Porto  | Gao       | 500111 |    123456789 | cris@gmail.com |
++----+------------+-----------+---------+--------+-----------+--------+--------------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT first_name FROM addressbook ORDER BY city;
++------------+
+| first_name |
++------------+
+| Veeresh    |
+| Ronaldo    |
++------------+
+2 rows in set (0.02 sec)
