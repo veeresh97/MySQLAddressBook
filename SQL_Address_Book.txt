@@ -163,3 +163,30 @@ mysql> SELECT first_name FROM addressbook ORDER BY city;
 | Ronaldo    |
 +------------+
 2 rows in set (0.02 sec)
+
+---UC9---
+
+mysql> ALTER TABLE addressbook ADD AddressBookname VARCHAR(150) AFTER email;
+Query OK, 0 rows affected (2.41 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE addressbook ADD AddressBookType VARCHAR(150) AFTER AddressBookname;
+Query OK, 0 rows affected (0.60 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> UPDATE addressbook SET AddressBookname = 'AddressBook1', AddressBookType= 'Family' WHERE first_name = 'Veeresh';
+Query OK, 1 row affected (0.30 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE addressbook SET AddressBookname = 'AddressBook2', AddressBookType= 'Friend' WHERE first_name = 'Ronaldo';
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM addressbook;
++----+------------+-----------+---------+--------+-----------+--------+--------------+----------------+-----------------+-----------------+
+| id | first_name | last_name | address | city   | state     | zip    | phone_number | email          | AddressBookname | AddressBookType |
++----+------------+-----------+---------+--------+-----------+--------+--------------+----------------+-----------------+-----------------+
+|  1 | Veeresh    | SB        | Haveri  | Haveri | Karnataka | 588111 |    123456123 | veer@gmail.com | AddressBook1    | Family          |
+|  2 | Ronaldo    | CR        | Libson  | Porto  | Gao       | 500111 |    123456789 | cris@gmail.com | AddressBook2    | Friend          |
++----+------------+-----------+---------+--------+-----------+--------+--------------+----------------+-----------------+-----------------+
+2 rows in set (0.00 sec)
