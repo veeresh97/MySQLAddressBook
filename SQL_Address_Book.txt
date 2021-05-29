@@ -1,1 +1,35 @@
 Welcome to Address Book Database
+
+---UC1---
+mysql> show databases;
++------------------------+
+| Database               |
++------------------------+
+| information_schema     |
+| mysql                  |
+| mysql_employee_payroll |
+| payroll_service        |
+| performance_schema     |
+| sys                    |
++------------------------+
+6 rows in set (6.99 sec)
+
+mysql> create database address_book;
+Query OK, 1 row affected (3.37 sec)
+
+mysql> show databases;
++------------------------+
+| Database               |
++------------------------+
+| address_book           |
+| information_schema     |
+| mysql                  |
+| mysql_employee_payroll |
+| payroll_service        |
+| performance_schema     |
+| sys                    |
++------------------------+
+7 rows in set (0.09 sec)
+
+mysql> use address_book;
+Database changed
