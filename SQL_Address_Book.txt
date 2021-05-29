@@ -201,3 +201,24 @@ mysql> SELECT AddressBookType, count(*) FROM addressbook GROUP BY AddressBookTyp
 | Friend          |        1 |
 +-----------------+----------+
 2 rows in set (0.06 sec)
+
+---UC11---
+
+mysql> INSERT INTO addressbook (first_name, last_name, address, city, state, zip, phone_number, email, AddressBookname, AddressBookType) VALUES;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> INSERT INTO addressbook (first_name, last_name, address, city, state, zip, phone_number, email, AddressBookname, AddressBookType) VALUES
+    -> ('Mike', 'gibbs', 'LakeRoad', 'Hubli', 'UP', '581235', '789654113', 'mikeg@gmail.com', 'AddressBook3', 'Friend'),
+    -> ('Paula', 'Patrick', 'Jaynagar', 'pune', 'Maharastra', '5486845', '39856214', 'paulapat@gmail.com', 'AddressBook4', 'Family');
+Query OK, 2 rows affected (0.19 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM addressbook;
++----+------------+-----------+----------+--------+------------+---------+--------------+--------------------+-----------------+-----------------+
+| id | first_name | last_name | address  | city   | state      | zip     | phone_number | email              | AddressBookname | AddressBookType |
++----+------------+-----------+----------+--------+------------+---------+--------------+--------------------+-----------------+-----------------+
+|  1 | Veeresh    | SB        | Haveri   | Haveri | Karnataka  |  588111 |    123456123 | veer@gmail.com     | AddressBook1    | Family          |
+|  2 | Ronaldo    | CR        | Libson   | Porto  | Gao        |  500111 |    123456789 | cris@gmail.com     | AddressBook2    | Friend          |
+|  4 | Mike       | gibbs     | LakeRoad | Hubli  | UP         |  581235 |    789654113 | mikeg@gmail.com    | AddressBook3    | Friend          |
+|  5 | Paula      | Patrick   | Jaynagar | pune   | Maharastra | 5486845 |     39856214 | paulapat@gmail.com | AddressBook4    | Family          |
++----+------------+-----------+----------+--------+------------+---------+--------------+--------------------+-----------------+-----------------+
+4 rows in set (0.05 sec)
