@@ -33,3 +33,36 @@ mysql> show databases;
 
 mysql> use address_book;
 Database changed
+
+---UC2---
+
+mysql> create table addressbook
+    -> (
+    -> id          INT unsigned NOT NULL AUTO_INCREMENT,
+    -> first_name  VARCHAR(150) NOT NULL,
+    -> last_name   VARCHAR(150) NOT NULL,
+    -> address     VARCHAR(250) NOT NULL,
+    -> city        VARCHAR(150) NOT NULL,
+    -> state       VARCHAR(150) NOT NULL,
+    -> zip         INT NOT NULL,
+    -> phone_number  INT NOT NULL,
+    -> email       VARCHAR(150) NOT NULL,
+    -> PRIMARY KEY    (id)
+    -> );
+Query OK, 0 rows affected (3.62 sec)
+
+mysql> DESCRIBE addressbook;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| id           | int unsigned | NO   | PRI | NULL    | auto_increment |
+| first_name   | varchar(150) | NO   |     | NULL    |                |
+| last_name    | varchar(150) | NO   |     | NULL    |                |
+| address      | varchar(250) | NO   |     | NULL    |                |
+| city         | varchar(150) | NO   |     | NULL    |                |
+| state        | varchar(150) | NO   |     | NULL    |                |
+| zip          | int          | NO   |     | NULL    |                |
+| phone_number | int          | NO   |     | NULL    |                |
+| email        | varchar(150) | NO   |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+9 rows in set (0.26 sec)
